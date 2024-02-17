@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import clsx from "clsx";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
