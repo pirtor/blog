@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import "highlight.js/styles/vs2015.min.css";
 import { getNextPost, posts } from "../getPosts";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Comments from "@/components/Comments";
 
 export async function generateStaticParams() {
   return posts.map((post) => ({
@@ -31,10 +31,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <MDXContent />
       </div>
 
+      <div className=" mt-12 mb-6">
+        <Comments />
+      </div>
+
       {nextPost ? (
         <Link
           href={nextPost?.url}
-          className="flex flex-row-reverse items-center mt-14 overflow-hidden"
+          className="flex flex-row-reverse items-center overflow-hidden"
         >
           <div className="text-sm border w-1/2 px-3 py-2 cursor-pointer overflow-hidden text-right rounded">
             <p className=" text-sm text-primary/60 mb-1">Next: </p>
