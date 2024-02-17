@@ -11,9 +11,9 @@ export default function Footer() {
           <Button variant="link" asChild size="sm">
             <a
               className=" text-primary/60 hover:text-primary"
-              href="mailto:pirtorle@gmain.com?subject=Hello"
+              href="mailto:hello@pirtor.com?subject=Hello"
             >
-              pirtorle@gmail.com
+              hello@pirtor.com
             </a>
           </Button>
         </p>
